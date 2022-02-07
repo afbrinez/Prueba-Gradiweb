@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="modal" id="modal">
+        <h3 id="title-modal"></h3>
+        <p id="variante-modal"></p>
+        <span class="close-modal" id="close-modal">x</span>
+    </div>
+    <div class="main">
+        <div class="images-desktop item" id="slider-desktop">
+
+        </div>
+
+        <div class="slide-contenedor item" id="slider-contenedor">
+            <div class="direcciones">
+                <a href="#" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+                <a href="#" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+            </div>
+            <div class="barras">
+                <span class="barra active" onclick="posicionSlide(1)"></span>
+                <span class="barra" onclick="posicionSlide(2)"></span>
+                <span class="barra" onclick="posicionSlide(3)"></span>
+                <span class="barra" onclick="posicionSlide(4)"></span>
+            </div>
+        </div>
+
+        <div class="content-container item">
+        <div class="title-container">
+            <h3 class="product-vendor" id="product-vendor"></h3>
+            <h1 class="product-title" id="product-title"></h1>
+            <div class="price-container">
+                <span class="price product-price" id="product-price"></span>
+                <span class="price compare-product-price" id="compare-product-price"></span>
+            </div>
+        </div>
+        <hr>
+        
+        <form id="product-form">
+            <div class="color-container">
+                <p class="name-color">Color: </p>
+                <div class="product-color" id="product-color"></div>
+            </div>
+            <hr>
+            <div class="size-container">
+                <p class="name-size">Size: </p>
+                <div class="product-size" id="product-size"></div>
+            </div>
+            <hr>
+            <div class="total-price-container">
+                <div class="quantity-selector">
+                    <button type="button" class="quantity-button" onclick="lessButton()">-</button>
+                    <input type="number" id="quantity" class="quantity" value="1">
+                    <button type="button" class="quantity-button" onclick="plusButton()">+</button>
+                </div>
+                <p>Total price: <span class="pesos">$ </span><span class="total-price" id="total-price"></span></p>
+            </div>
+            
+            <div class="buttons-container">
+                <button type="submit" class="buttons favourite-button">Add to favourite</button>
+                <button type="submit" class="buttons add-button" id="btnaddtocart">Add to card</button>
+            </div>
+        </form>
+        <div class="description-container" id="description-container"></div>
+        
+        <div class="button-contenedor" id="button-contenedor"></div>
+
+        </div>
+    </div>
+
+    <script src="./application.js"></script>
+    <script src="./slider.js"></script>
+</body>
+</html>
